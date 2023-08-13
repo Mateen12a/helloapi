@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: helloapi
   labels:
-    app: gitopsapi
+    app: helloapi
 spec:
   replicas: 3  # Set the desired number of replicas for the application
   selector:
