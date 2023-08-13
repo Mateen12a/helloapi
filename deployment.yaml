@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloapi
+  labels:
+    app: gitopsapi
+spec:
+  replicas: 3  # Set the desired number of replicas for the application
+  selector:
+    matchLabels:
+      app: helloapi
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: helloapi
+    spec:
+      containers:
+        - name: helloapi
+          image: #ecrimage link here or docker image here
+          resources: {}
